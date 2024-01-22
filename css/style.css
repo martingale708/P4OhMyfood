@@ -280,9 +280,10 @@ i {
 .tutoriel__selection li {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 98%;
   height: 80px;
   margin: 15px;
+  cursor: pointer;
   border-radius: 20px;
   background-color: rgb(246, 246, 246);
 }
@@ -315,8 +316,9 @@ p {
 
 /**********SECTION RESTO*********/
 .resto {
+  width: 80%;
   background-color: #f6f6f6;
-  margin: 0;
+  margin: auto;
   padding: 0;
 }
 .resto__titre {
@@ -410,7 +412,7 @@ figcaption p {
   .menus {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 30px;
+    row-gap: 60px;
     column-gap: 30px;
     justify-content: space-between;
     align-content: center;
@@ -419,7 +421,16 @@ figcaption p {
     width: 47%;
   }
   .tutoriel__selection {
+    width: 85%;
+    margin-left: 130px;
     display: flex;
+    justify-content: space-around;
+  }
+  .tutoriel__titre {
+    margin-left: 150px;
+  }
+  .tutoriel__selection li {
+    width: 30%;
   }
 }
 .banner img {

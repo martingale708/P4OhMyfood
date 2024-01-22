@@ -87,7 +87,7 @@
   }
   &__soustitre {
     font-family: "Roboto-light";
-    font-weight:100;
+    font-weight: 100;
     font-size: 22px;
     text-align: center;
   }
@@ -127,9 +127,10 @@ i {
     & li {
       display: flex;
       align-items: center;
-      width: 100%;
+      width: 98%;
       height: 80px;
       margin: 15px;
+      cursor: pointer;
       border-radius: 20px;
       background-color: rgb(246, 246, 246);
     }
@@ -160,8 +161,9 @@ p {
 }
 /**********SECTION RESTO*********/
 .resto {
-  background-color:$restoColor;
-  margin: 0;
+  width: 80%;
+  background-color: $restoColor;
+  margin: auto;
   padding: 0;
   &__titre {
     font-size: 1.6rem;
@@ -221,7 +223,7 @@ p {
 }
 figcaption p {
   font-size: 16px;
-  font-weight: 100
+  font-weight: 100;
 }
 @include heart-animation;
 
@@ -230,7 +232,7 @@ figcaption p {
   .menus {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 30px;
+    row-gap: 60px;
     column-gap: 30px;
     justify-content: space-between;
     align-content: center;
@@ -239,10 +241,18 @@ figcaption p {
     }
   }
   .tutoriel__selection {
+    width: 85%;
+    margin-left: 130px;
     display: flex;
+    justify-content: space-around;
+  }
+  .tutoriel__titre {
+    margin-left: 150px;
+  }
+  .tutoriel__selection li {
+    width: 30%;
   }
 }
-
 // ***********PAGES1 RESTAURANT*************
 .banner {
   img {
