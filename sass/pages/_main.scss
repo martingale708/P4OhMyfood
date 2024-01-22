@@ -1,0 +1,252 @@
+/*****loader*****/
+.loader {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  opacity: 1;
+  animation: disappear 4s forwards;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  margin: 0 5px;
+  border-radius: 50%;
+  color: pink;
+  background: currentColor;
+  box-shadow: 50px 0, -50px 0;
+  animation: left 1s infinite ease-in-out;
+}
+.loader:after {
+  color: #ff3d00;
+  animation: right 1.1s infinite ease-in-out;
+}
+
+@keyframes right {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes left {
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+
+// ******LOCALISATION*******
+.localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__fa-solid {
+    font-weight: 900;
+  }
+  padding: 20px;
+  background-color: $backgroundlocal;
+  &__lieu {
+    font-size: 22px;
+    margin-left: 20px;
+  }
+}
+// *********EXPLORER****************
+.explorer {
+  background-color: $explorerColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__titre {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 30px 5px;
+    text-align: center;
+  }
+  &__soustitre {
+    font-family: "Roboto-light";
+    font-weight:100;
+    font-size: 22px;
+    text-align: center;
+  }
+  &__btn {
+    @include linear-gradient;
+    @include button-shadow;
+    width: 300px;
+    height: 70px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 30px;
+    color: white;
+    border-radius: 40px;
+    &:hover {
+      @include hover-shadow;
+    }
+  }
+}
+/******µSECTION TUORIEL******/
+i {
+  position: relative;
+}
+.fas {
+  font-weight: 900;
+  margin-right: 10px;
+}
+.tutoriel {
+  padding: 30px 15px;
+  &__titre {
+    font-size: 23px;
+    margin: 0px 0px 35px 0px;
+    font-weight: 500;
+  }
+  &__selection {
+    padding-left: 10px;
+    list-style-type: none;
+    & li {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 80px;
+      margin: 15px;
+      border-radius: 20px;
+      background-color: rgb(246, 246, 246);
+    }
+  }
+}
+.tutoriel__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $backgroundtutonumb;
+  color: #fff;
+  border-radius: 50%;
+  border: 2px solid $backgroundtutonumb;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  right: 10px;
+}
+.tutoriel__icon {
+  margin-left: 10px;
+  margin-right: 20px;
+  color: $tutoiconColor;
+  font-size: 18px;
+}
+p {
+  font-size: 16px;
+  font-weight: 500;
+}
+/**********SECTION RESTO*********/
+.resto {
+  background-color:$restoColor;
+  margin: 0;
+  padding: 0;
+  &__titre {
+    font-size: 1.6rem;
+    padding: 20px;
+  }
+}
+.menus {
+  margin: 1rem;
+
+  &__card {
+    border-radius: 20px;
+    box-shadow: 4px 4px 6px $menucardshadhoww;
+    position: relative;
+    background: #fff;
+    width: 100%;
+    figure {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 20px;
+      img {
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        width: 100%;
+        height: 100%;
+        max-height: 180px;
+      }
+      figcaption {
+        padding: 10px 15px 15px 15px;
+      }
+    }
+  }
+}
+.menus__button .slogan {
+  color: $menubutton;
+  background: #99e2d0;
+  border: 5px solid #99e2d0;
+  border-radius: 2px;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  font-weight: bold;
+  font-size: 14px;
+  width: 25%;
+  text-align: center;
+  animation: clignote 2s linear infinite;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & i {
+    position: absolute;
+    right: 15px;
+  }
+}
+figcaption p {
+  font-size: 16px;
+  font-weight: 100
+}
+@include heart-animation;
+
+// ***********MEDIAQUERY***************
+@media screen and (min-width: 768px) {
+  .menus {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 30px;
+    justify-content: space-between;
+    align-content: center;
+    &__card {
+      width: 47%;
+    }
+  }
+  .tutoriel__selection {
+    display: flex;
+  }
+}
+
+// ***********PAGES1 RESTAURANT*************
+.banner {
+  img {
+    width: 100%;
+    height: 70vh;
+  }
+}

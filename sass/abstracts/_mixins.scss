@@ -1,0 +1,74 @@
+@mixin linear-gradient{
+  background: linear-gradient(#ff79da, #9356dc);
+}
+@mixin button-shadow{
+  box-shadow: 2px 5px 20px rgb(167, 167, 167);
+}
+@mixin hover-shadow{
+  box-shadow: 3px 6px 20px rgb(137, 137, 137);
+}
+@mixin heart-animation{
+  .heart-icon {
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+      background-image: linear-gradient(#ff79da, #9356dc);
+      background-clip: text;
+      color: transparent;
+      animation: heart 800ms both ;
+    }
+     &:hover::after{
+     background-color: black;
+     position: relative;
+     opacity: 1;
+      background-image: linear-gradient(#ff79da, #9356dc);
+      background-clip: text;
+      color: transparent;
+   animation: heart-inverse 800ms ease both;
+   }
+  }
+  .fa-heart {
+    position: absolute;
+    font-size: 24px;
+  }
+  }
+  @keyframes heart{
+    0%{
+      transform:scale(0);
+    }
+    25%{
+      transform: scale(0.3);
+    }
+    50%{
+      transform: scale(0.5);
+    }
+    75%{
+      transform: scale(0.8);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+  @keyframes heart-inverse{
+    0%{
+      transform:scale(1);
+    }
+    25%{
+      transform: scale(0.8);
+    }
+    50%{
+      transform: scale(0.5);
+    }
+    75%{
+      transform: scale(0.3);
+    }
+    100%{
+      transform: scale(0);
+    }
+  }
+ 
+
+  
+  
+  
+  

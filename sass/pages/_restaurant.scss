@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,800&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Shrikhand&display=swap");
+// *****MENU1*********
+.fa-solid {
+  font-weight: 900;
+}
+.header__icon {
+  position: relative;
+  left: 30px;
+  font-size: 20px;
+  color: black;
+}
+.header__icon:hover {
+  color: #99e2d0;
+  transform: scale(1.1);
+}
+.banner img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 370px;
+}
+
+.menu {
+  background-color: #f2f2f2;
+  position: relative;
+  z-index: 5;
+  border-radius: 40px 40px 0px 0px;
+  margin-top: -40px;
+}
+.menu__header {
+  position: relative;
+   & i {
+     position: absolute;
+    right: 10px;
+    
+   }
+  padding: 40px 32px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  &_title {
+    font-family: "Shrikhand", serif;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+  }
+  & span{
+    position: absolute;
+    transform: translateX(320px);
+
+  }
+  
+}
+.title {
+  margin-top: 20px;
+  & h3 {
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    padding-left: 15px;
+  }
+  &::after {
+    content: "";
+    display: block;
+    margin-top: 5px;
+    width: 50px;
+    height: 3px;
+    background-color: #99e2d0;
+    animation: progress 2s;
+    animation-fill-mode: none;
+    animation-fill-mode: both;
+  }
+}
+
+// *******KEYFRAMES ANIMATION**********
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.meals {
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 20px 10px;
+  padding: 10px;
+  box-shadow: 4px 4px 6px #aaa;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
+}
+.delay1 {
+  animation: fade-in-bottom 1s ease-in-out;
+}
+
+.delay2 {
+  animation: fade-in-bottom 2s ease-in-out;
+}
+.delay3 {
+  animation: fade-in-bottom 3s ease-in-out;
+}
+.delay4 {
+  animation: fade-in-bottom 4s ease-in-out;
+}
+
+.delay5 {
+  animation: fade-in-bottom 5s ease-in-out;
+}
+.delay6 {
+  animation: fade-in-bottom 6s ease-in-out;
+}
+.delay7 {
+  animation: fade-in-bottom 7s ease-in-out;
+}
+
+.delay8 {
+  animation: fade-in-bottom 8s ease-in-out;
+}
+.delay9 {
+  animation: fade-in-bottom 9s ease-in-out;
+}
+
+.meals h4 {
+  font-family: "Roboto";
+  font-size: 1rem;
+}
+.meals p {
+  font-size: 13px;
+  font-weight: lighter;
+}
+.meals:hover {
+  padding-right: 75px;
+}
+.meals:hover .cross {
+  opacity: 1;
+  transform: translate(-50px);
+}
+.meals:hover .fa-check-circle {
+  animation: rotate 2s;
+}
+
+.last__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.2em;
+}
+.last__line span {
+  margin-right: 2px;
+}
+.num {
+  font-weight: bold;
+}
+.cross {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+  background-color: #99e2d0;
+  width: 50px;
+  height: 69px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  padding: 20px;
+  right: -50px;
+  top: 0;
+  opacity: 0;
+  transition: transform 330ms ease-in-out;
+}
+.cross .fa-check-circle {
+  color: #fff;
+  transition: transform 500ms ease-in-out;
+}
+// ***********MEDIAQUERY**************
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 75%;
+    margin: auto;
+    margin-top: -20px;
+  }
+  .menu__header {
+     position: relative;
+    justify-content: center;
+    gap: 20px;
+    & span{
+      position: absolute;
+      transform: translateX(190px);
+     
+    }
+  }
+  .explorer__btn {
+    margin: 30px auto;
+  }
+  .center {
+    text-align: center;
+  }
+  .menu__header {
+    & i {
+      position: absolute;
+      right: 10px;
+    }
+    padding: 40px 32px;
+    width: 100%;
+    margin-bottom: 20px;
+    &_title {
+      font-family: "Shrikhand", serif;
+      font-size: 28px;
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+  @include heart-animation;
+}
+.menu__header_title span{
+  margin-left: 20px;
+}
+
+// ***************ANIMATION*************
+@keyframes appear {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
