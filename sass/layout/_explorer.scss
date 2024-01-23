@@ -1,0 +1,36 @@
+.explorer {
+    background-color: $explorerColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__titre {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 30px 5px;
+      padding: 0 40px;
+      text-align: center;
+    }
+    &__soustitre {
+      font-family: "Roboto-light";
+      font-weight: 100;
+      font-size: 21px;
+      text-align: center;
+      margin: 0 15px;
+    }
+    &__btn {
+      @include linear-gradient;
+      @include button-shadow;
+      width: 240px;
+      height: 70px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 30px 50px 60px 50px;
+      color: white;
+      border-radius: 40px;
+      &:hover {
+        @include hover-shadow;
+      }
+    }
+  }
+  

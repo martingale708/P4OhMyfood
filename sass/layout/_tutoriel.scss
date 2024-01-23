@@ -1,0 +1,52 @@
+i {
+    position: relative;
+  }
+  .fas {
+    font-weight: 900;
+    margin-right: 10px;
+  }
+  .tutoriel {
+    padding: 30px 15px;
+    &__titre {
+      font-size: 24px;
+      margin: 0px 0px 35px 0px;
+      font-weight: 700;
+    }
+    &__selection {
+      padding: 0 10px;
+      list-style-type: none;
+      & li {
+        display: flex;
+        align-items: center;
+        width: 98%;
+        height: 80px;
+        margin: 15px;
+        cursor: pointer;
+        border-radius: 20px;
+        background-color: rgb(246, 246, 246);
+      }
+    }
+  }
+  .tutoriel__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $backgroundtutonumb;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid $backgroundtutonumb;
+    width: 28px;
+    height: 28px;
+    position: relative;
+    right: 10px;
+  }
+  .tutoriel__icon {
+    margin-left: 10px;
+    margin-right: 20px;
+    color: $tutoiconColor;
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+  }
