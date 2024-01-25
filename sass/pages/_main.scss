@@ -1,36 +1,4 @@
 /*****loader*****/
-.loader {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  opacity: 1;
-  animation: disappear 4s forwards;
-}
-.loader:before,
-.loader:after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  position: relative;
-  margin: 0 5px;
-  border-radius: 50%;
-  color: pink;
-  background: currentColor;
-  box-shadow: 50px 0, -50px 0;
-  animation: left 1s infinite ease-in-out;
-}
-.loader:after {
-  color: #ff3d00;
-  animation: right 1.1s infinite ease-in-out;
-}
 
 @keyframes right {
   0%,
