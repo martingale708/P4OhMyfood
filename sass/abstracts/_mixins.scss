@@ -8,22 +8,23 @@
   box-shadow: 3px 6px 20px rgb(137, 137, 137);
 }
 @mixin heart-animation {
+  .menu__header{
+    position:relative;
+  }
   .fa-heart {
     position: absolute;
     font-size: 24px;
+    transition: transform 1s ease;
   }
   .heart-icon {
-    opacity: 0;
+    transform: scale(0);
     background-image: linear-gradient(#ff79da, #9356dc);
     background-clip: text;
-    color: transparent;
-    transition-property: all;
-    transition: opacity 600ms ease-in-out;
-    &:hover {
-      opacity: 1;
-      background-image: linear-gradient(#ff79da, #9356dc);
-      background-clip: text;
-      color: transparent;
-    }
+     color: transparent;
+  }
+  .menu__header:hover .heart-icon{
+    transform: scale(1);
   }
 }
+
+

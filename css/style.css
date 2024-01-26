@@ -314,24 +314,25 @@ figcaption p {
   font-weight: 100;
 }
 
+.menu__header {
+  position: relative;
+}
+
 .fa-heart {
   position: absolute;
   font-size: 24px;
+  transition: transform 1s ease;
 }
 
 .heart-icon {
-  opacity: 0;
+  transform: scale(0);
   background-image: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
   color: transparent;
-  transition-property: all;
-  transition: opacity 600ms ease-in-out;
 }
-.heart-icon:hover {
-  opacity: 1;
-  background-image: linear-gradient(#ff79da, #9356dc);
-  background-clip: text;
-  color: transparent;
+
+.menu__header:hover .heart-icon {
+  transform: scale(1);
 }
 
 /*****loader*****/
@@ -653,23 +654,22 @@ figcaption p {
     font-weight: 400;
     font-style: italic;
   }
+  .menu__header {
+    position: relative;
+  }
   .fa-heart {
     position: absolute;
     font-size: 24px;
+    transition: transform 1s ease;
   }
   .heart-icon {
-    opacity: 0;
+    transform: scale(0);
     background-image: linear-gradient(#ff79da, #9356dc);
     background-clip: text;
     color: transparent;
-    transition-property: all;
-    transition: opacity 600ms ease-in-out;
   }
-  .heart-icon:hover {
-    opacity: 1;
-    background-image: linear-gradient(#ff79da, #9356dc);
-    background-clip: text;
-    color: transparent;
+  .menu__header:hover .heart-icon {
+    transform: scale(1);
   }
 }
 .menu__header_title span {
