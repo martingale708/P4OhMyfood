@@ -245,6 +245,10 @@ p {
   font-weight: 500;
 }
 
+.tutoriel__icon .fa-store {
+  color: #9356dc;
+}
+
 .resto {
   width: 100%;
   background-color: #f6f6f6;
@@ -314,14 +318,14 @@ figcaption p {
   font-weight: 100;
 }
 
-.menu__header {
+.heart-animated {
   position: relative;
 }
 
 .fa-heart {
   position: absolute;
   font-size: 24px;
-  transition: transform 1s ease;
+  transition: transform 800ms ease;
 }
 
 .heart-icon {
@@ -331,7 +335,7 @@ figcaption p {
   color: transparent;
 }
 
-.menu__header:hover .heart-icon {
+.heart-animated:hover .heart-icon {
   transform: scale(1);
 }
 
@@ -377,6 +381,23 @@ figcaption p {
 @media screen and (min-width: 768px) {
   .resto {
     width: 85%;
+  }
+  .resto .heart-animated {
+    position: relative;
+  }
+  .resto .fa-heart {
+    position: absolute;
+    font-size: 24px;
+    transition: transform 800ms ease;
+  }
+  .resto .heart-icon {
+    transform: scale(0);
+    background-image: linear-gradient(#ff79da, #9356dc);
+    background-clip: text;
+    color: transparent;
+  }
+  .resto .heart-animated:hover .heart-icon {
+    transform: scale(1);
   }
   .menus {
     display: flex;
@@ -446,10 +467,6 @@ figcaption p {
   margin-bottom: 20px;
   justify-content: space-between;
 }
-.menu__header i {
-  position: absolute;
-  right: 10px;
-}
 .menu__header_title {
   font-family: "Shrikhand", serif;
   font-size: 28px;
@@ -458,7 +475,24 @@ figcaption p {
 }
 .menu__header span {
   position: absolute;
-  transform: translateX(320px);
+  transform: translateX(-20px);
+}
+.menu__header .heart-animated {
+  position: relative;
+}
+.menu__header .fa-heart {
+  position: absolute;
+  font-size: 24px;
+  transition: transform 800ms ease;
+}
+.menu__header .heart-icon {
+  transform: scale(0);
+  background-image: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  color: transparent;
+}
+.menu__header .heart-animated:hover .heart-icon {
+  transform: scale(1);
 }
 
 .title {
@@ -631,7 +665,7 @@ figcaption p {
   }
   .menu__header span {
     position: absolute;
-    transform: translateX(190px);
+    transform: translateX(30px);
   }
   .explorer__btn {
     margin: 30px auto;
@@ -654,13 +688,13 @@ figcaption p {
     font-weight: 400;
     font-style: italic;
   }
-  .menu__header {
+  .heart-animated {
     position: relative;
   }
   .fa-heart {
     position: absolute;
     font-size: 24px;
-    transition: transform 1s ease;
+    transition: transform 800ms ease;
   }
   .heart-icon {
     transform: scale(0);
@@ -668,7 +702,7 @@ figcaption p {
     background-clip: text;
     color: transparent;
   }
-  .menu__header:hover .heart-icon {
+  .heart-animated:hover .heart-icon {
     transform: scale(1);
   }
 }

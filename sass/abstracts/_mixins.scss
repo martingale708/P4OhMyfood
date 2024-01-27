@@ -8,13 +8,13 @@
   box-shadow: 3px 6px 20px rgb(137, 137, 137);
 }
 @mixin heart-animation {
-  .menu__header{
+  .heart-animated{
     position:relative;
   }
   .fa-heart {
     position: absolute;
     font-size: 24px;
-    transition: transform 1s ease;
+    transition: transform 800ms ease;
   }
   .heart-icon {
     transform: scale(0);
@@ -22,9 +22,10 @@
     background-clip: text;
      color: transparent;
   }
-  .menu__header:hover .heart-icon{
+  .heart-animated:hover .heart-icon{
     transform: scale(1);
   }
 }
+
 
 

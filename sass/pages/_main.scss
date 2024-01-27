@@ -47,6 +47,7 @@
 @media screen and (min-width: 768px) {
   .resto {
     width: 85%;
+    @include heart-animation;
   }
   .menus {
     display: flex;
