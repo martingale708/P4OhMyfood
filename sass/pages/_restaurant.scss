@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,800&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Shrikhand&display=swap");
-// *****MENU1*********
+// *****MENUS*********
 .fa-solid {
   font-weight: 900;
 }
@@ -19,13 +19,19 @@
   width: 100%;
   height: 370px;
 }
-
+// .main{
+//   background-color: #f2f2f2;
+// }
+.menu__categories{
+  padding:0 2%;
+}
 .menu {
-  background-color: #f2f2f2;
+   background-color: #f2f2f2;
+   
   position: relative;
   z-index: 5;
   border-radius: 40px 40px 0px 0px;
-  margin-top: -40px;
+  margin-top: -50px;
 }
 .menu__header {
    position: relative;
@@ -39,6 +45,7 @@
     font-size: 28px;
     font-weight: 400;
     font-style: italic;
+
   }
   & span{
     position: absolute;
@@ -54,7 +61,7 @@
   margin-bottom: 30px;
 }
 .dessert{
-  margin-bottom: 30px;
+  // margin-bottom: 40px;
 }
 .title {
   margin-top: 20px;
@@ -77,6 +84,16 @@
     animation-fill-mode: none;
     animation-fill-mode: both;
   }
+}
+.menu .explorer__btn{
+  width: 220px;
+  margin: 20px 0 40px 0;
+
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // *******KEYFRAMES ANIMATION**********
@@ -115,7 +132,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  transition: padding-right 450ms ease-in-out;
+  transition: padding-right 800ms ease-in-out;
 }
 
 .delay1 {
@@ -194,7 +211,6 @@
   padding: 20px;
   right: -50px;
   top: 0;
-  opacity: 0;
   transition: transform 330ms ease-in-out;
 }
 .cross .fa-check-circle {
@@ -203,6 +219,9 @@
 }
 // ***********MEDIAQUERY**************
 @media screen and (min-width: 768px) {
+  .menu__categories{
+    padding:0 15%;
+  }
   .menu {
     width: 75%;
     margin: auto;
@@ -219,10 +238,10 @@
     }
   }
   .explorer__btn {
-    margin: 30px auto;
+     margin: 30px auto;
   }
   .center {
-    text-align: center;
+   text-align:center;
   }
   .menu__header {
     & i {

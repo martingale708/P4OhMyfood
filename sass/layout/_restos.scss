@@ -1,6 +1,9 @@
+.restaurant{
+  background-color: $restoColor;
+}
 .resto {
     width: 100%;
-    background-color: $restoColor;
+    // background-color: $restoColor;
     margin: auto;
     padding: 0;
     &__titre {
