@@ -28,6 +28,7 @@
       margin: 30px 50px 60px 50px;
       color: white;
       border-radius: 40px;
+      border: none;
       &:hover {
         @include hover-shadow;
       }
